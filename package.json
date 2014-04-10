@@ -1,0 +1,15 @@
+{
+  "name": "ui5-snippets",
+  "main": "./lib/ui5-snippets",
+  "version": "0.0.1",
+  "description": "Snippets for SAPUI5 and OpenUI5",
+  "repository": "https://github.com/qmacro/ui5-snippets",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {},
+  "bugs": {
+    "url": "https://github.com/qmacro/ui5-snippets/issues"
+  }
+}
