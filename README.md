@@ -6,7 +6,27 @@ A package of snippets for [SAPUI5](sapui5.hana.ondemand.com/sdk/) and [OpenUI5](
 
 ![OpenUI5 Logo](http://sap.github.io/openui5/images/icotxt_white_220x72_blue_open.png)
 
-Snippets begin `ui5`
+JavaScript-based snippets begin `ui5`
+
+## sap.m
+
+### XML
+
+ * `IconTabBar` - [sap.m.IconTabBar](https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabBar.html)
+ * `IconTabFilter` - [sap.m.IconTabFilter](https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabFilter.html)
+ * `List` - [sap.m.List](https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.List.html)
+ * `ObjectAttribute` - [sap.m.ObjectAttribute](https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectAttribute.html)
+ * `ObjectAttributeF` - [sap.m.ObjectAttribute](https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectAttribute.html) (with formatter)
+ * `ObjectHeader` - [sap.m.ObjectHeader](https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectHeader.html)
+ * `ObjectIdentifier` - [sap.m.ObjectIdentifier](https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectIdentifier.html)
+ * `ObjectListItem` - [sap.m.ObjectListItem](https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectListItem.html)
+ * `ObjectNumber` - [sap.m.ObjectNumber](https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectNumber.html)
+ * `ObjectStatus` - [sap.m.ObjectStatus](https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectStatus.html)
+ * `ObjectStatusF` - [sap.m.ObjectStatusF](https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectStatus.html) (with formatter)
+ * `Page` - [sap.m.Page](https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Page.html)
+ * `SearchField` - [sap.m.SearchField](https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SearchField.html)
+ * `StandardListItem` - [sap.m.StandardListItem](https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.StandardListItem.html)
+ * `Table` - [sap.m.Table](https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Table.html)
 
 ## HTML
 
