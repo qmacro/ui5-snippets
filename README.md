@@ -6,7 +6,11 @@ A package of snippets for [SAPUI5](sapui5.hana.ondemand.com/sdk/) and [OpenUI5](
 
 ![OpenUI5 Logo](http://sap.github.io/openui5/images/icotxt_white_220x72_blue_open.png)
 
-JavaScript-based snippets begin `ui5`
+## General
+
+ * `jsdec` - [jQuery.sap.declare](https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.declare)
+ * `jsreq` - [jQuery.sap.require](https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.require)
+ * `jslog` - [jQuery.sap.log](https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html)
 
 ## sap.m
 
