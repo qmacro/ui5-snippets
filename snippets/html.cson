@@ -49,35 +49,28 @@
     >
     </script>
 
-    <!-- XML-based view definition -->
     <script id="view1" type="sapui5/xmlview">
       <mvc:View
         controllerName="local.controller"
         xmlns:mvc="sap.ui.core.mvc"
         xmlns="sap.m">
-          ${6:<!-- Add your XML-based controls here -->}
+          ${0:<!-- Add your XML-based controls here -->}
       </mvc:View>
     </script>
 
     <script>
 
-      // Controller definition
       sap.ui.controller("local.controller", {
 
-        $0
+        onInit : function(oEvent) {
+          this.getView().setModel(new sap.ui.model.json.JSONModel({
+            $7
+          }));
+        }
 
       });
 
-      // Instantiate the View, assign a model
-      // and display
-      var oView = sap.ui.xmlview({
-        viewContent: jQuery('#view1').html()
-      });
-
-      oView.setModel(new sap.ui.model.json.JSONModel({
-          ${7:name: "value"}
-      }));
-
+      var oView = sap.ui.xmlview({ viewContent: jQuery('#view1').html() });
       oView.placeAt('content');
 
     </script>
