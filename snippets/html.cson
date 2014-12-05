@@ -1,40 +1,41 @@
 ".text.html":
-  "index.m.openui5starter":
-    "prefix": "openui5starter"
-    "body": """
-      <!DOCTYPE HTML>
-      <html>
-        <head>
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <meta charset="UTF-8">
+	"index.m.openui5starter":
+		"prefix": "openui5starter"
+		"body":
+			"""
+			<!DOCTYPE HTML>
+			<html>
+				<head>
+					<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+					<meta charset="UTF-8">
 
-          <title>${1:App Title}</title>
+					<title>${1:App Title}</title>
+				
+					<script id="sap-ui-bootstrap"
+						type="text/javascript"
+						src="/openui5/latest/resources/sap-ui-core.js"
+						data-sap-ui-theme="sap_bluecrystal"
+						data-sap-ui-libs="sap.m"
+						data-sap-ui-xx-bindingSyntax="complex"
+						data-sap-ui-resourceroots='{
+							"${2:namespace}" : "${3:./}"
+						}'
+					>
+					</script>
 
-          <script id="sap-ui-bootstrap"
-            type="text/javascript"
-            src="/openui5/latest/resources/sap-ui-core.js"
-            data-sap-ui-theme="sap_bluecrystal"
-            data-sap-ui-libs="sap.m"
-            data-sap-ui-xx-bindingSyntax="complex"
-            data-sap-ui-resourceroots='{
-                "${2:namespace}" : "${3:./}"
-            }'
-          >
-          </script>
+					<script>
 
-          <script>
+						$0
 
-          $0
+					</script>
+				</head>
 
-          </script>
-        </head>
-
-        <body id="content"
-            class="sapUiBody" />
-      </html>
-      <!-- Generated from the ui5-snippets package for Atom -->
-      <!-- More info: https://atom.io/packages/ui5-snippets -->
-    """
+				<body id="content"
+					class="sapUiBody" />
+			</html>
+			<!-- Generated from the ui5-snippets package for Atom -->
+			<!-- More info: https://atom.io/packages/ui5-snippets -->
+			"""
   "index.m":
     "prefix": "ui5indexm"
     "body": """

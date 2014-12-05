@@ -1,26 +1,50 @@
 ".source.js, .text.html":
-  "js.fevt":
-    "prefix": "fevt"
-    "body": """
-      function(oEvent) {
-        $0
-      }$1
-    """
-  "js.jsdec":
-    "prefix": "jsdec"
-    "body": """
-      jQuery.sap.declare("${1:identifier}");
-      $0
-    """
-  "js.jsreq":
-    "prefix": "jsreq"
-    "body": """
-      jQuery.sap.require("${1:identifier}");
-      $0
-    """
-  "js.jslog":
-    "prefix": "jslog"
-    "body": """
-      jQuery.sap.log.${1:info}("${2:logmessage}");
-      $0
-    """
+	"js.fevt":
+		"prefix": "fevt"
+		"body":
+			"""
+			function(oEvent) {
+				$0
+			}$1
+			"""
+	"js.jsdec":
+		"prefix": "jsdec"
+		"body":
+			"""
+			jQuery.sap.declare("${1:identifier}");
+			$0
+			"""
+	"js.jsreq":
+		"prefix": "jsreq"
+		"body":
+			"""
+			jQuery.sap.require("${1:identifier}");
+			$0
+			"""
+	"js.jslog":
+		"prefix": "jslog"
+		"body":
+			"""
+			jQuery.sap.log.${1:info}("${2:logmessage}");
+			$0
+			"""
+	"js.UIComponent":
+		"prefix": "uicomponent"
+		"body":
+			"""
+			sap.ui.core.UIComponent.extend("${1:namespace}.Component", {
+				metadata : {
+					name : "${2:Component Name}",
+					dependencies : {
+						libs : ["sap.m"]
+					}
+				},
+
+				createContent : function() {
+					return sap.ui.view({
+						viewName : "${1:namespace}.view.${3:Main}",
+						type : sap.ui.core.mvc.ViewType.XML
+					});
+				}
+			});
+			"""
