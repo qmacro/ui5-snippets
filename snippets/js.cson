@@ -1,4 +1,12 @@
 ".source.js, .text.html":
+	"js.ff":
+		"prefix": "ff"
+		"body":
+			"""
+			function($1) {
+				$0
+			}$2
+			"""
 	"js.fevt":
 		"prefix": "fevt"
 		"body":
