@@ -1,159 +1,175 @@
-"text.xml":
-  "xml.View":
-    "prefix": "xmlView":
-    "body": """
-    <mvc:View
-    	xmlns:mvc="sap.ui.core.mvc"
-    	displayBlock="true"
-    	xmlns="sap.m">
-        $0
-    </mvc:View>
-    """
-  "xml.m.IconTabBar":
-    "prefix": "IconTabBar"
-    "body": """
-      <IconTabBar>
-        <items>
-          ${1:}
-        </items>
-      </IconTabBar>
-    """
-  "xml.m.IconTabFilter":
-    "prefix": "IconTabFilter"
-    "body": """
-      <IconTabFilter
-        text="${1:textProperty}"
-        icon="sap-icon://${2:icon}">
-        <content>
-          ${3:}
-        </content>
-      </IconTabFilter>
-    """
-  "xml.m.List":
-    "prefix": "List"
-    "body": """
-      <List
-        id="${1:idList}"
-        mode="${2:SingleSelectMaster}"
-        select="${3:onListSelect}"
-        items="${4:itemsAggregation}">
-        <items>
-          ${5:}
-        </items>
-      </List>
-    """
-  "xml.m.ObjectAttributeF":
-    "prefix": "ObjectAttributeF"
-    "body": """
-    <ObjectAttribute
-      text="{
-        path: '${1:textProperty}',
-        formatter: '${2:formatter.identifier}'
-      }" />
-    """
-  "xml.m.ObjectAttribute":
-    "prefix": "ObjectAttribute"
-    "body": """
-    <ObjectAttribute text="${1:textProperty}" />
-    """
-  "xml.m.ObjectHeader":
-    "prefix": "ObjectHeader"
-    "body": """
-    <ObjectHeader
-      title="{${1:titleProperty}}"
-      number="{${2:numberProperty}}"
-      numberUnit="{${3:numberUnitProperty}}">
-      <attributes>
-          ${4:}
-      </attributes>
-      <firstStatus>
-          ${5:}
-      </firstStatus>
-    </ObjectHeader>
-    """
-  "xml.m.ObjectIdentifier":
-    "prefix": "ObjectIdentifier"
-    "body": """
-    <ObjectIdentifier
-      title="{${1:titleProperty}}"
-      text="{${2:textProperty}}" />
-    """
-  "xml.m.ObjectListItem":
-    "prefix": "ObjectListItem"
-    "body": """
-    <ObjectListItem
-      press="${1:onObjectListItemPress}"
-      title="{${2:titleProperty}}"
-      number="{${3:numberProperty}}"
-      numberUnit="{${4:numberUnitProperty}}">
-      <attributes>
-          ${5:}
-      </attributes>
-      <firstStatus>
-          ${6:}
-      </firstStatus>
-    </ObjectListItem>
-    """
-  "xml.m.ObjectNumber":
-    "prefix": "ObjectNumber"
-    "body": """
-    <ObjectNumber
-      number="{${1:numberProperty}}"
-      unit="{${2:unitProperty}}"
-      state="{${3:stateProperty}}" />
-    """
-  "xml.m.ObjectStatusF":
-    "prefix": "ObjectStatusF"
-    "body": """
-    <ObjectStatus
-      text="{${1:textProperty}}"
-      state="{
-        path: '${1:textProperty}',
-        formatter: 'formatter.identifier'
-      }" />
-    """
-  "xml.m.ObjectStatus":
-    "prefix": "ObjectStatus"
-    "body": """
-    <ObjectStatus
-      text="{${1:textProperty}}"
-      state="{${2:stateProperty}}" />
-    """
-  "xml.m.Page":
-    "prefix": "Page"
-    "body": """
-    <Page
-      title="${1:titleProperty}">
-      <content>
-        ${2:}
-      </content>
-    </Page>
-    """
-  "xml.m.SearchField":
-    "prefix": "SearchField"
-    "body": """
-    <SearchField
-      search="${1:onSearch}"
-      width="100%" />
-    """
-  "xml.m.StandardListItem":
-    "prefix": "StandardListItem"
-    "body": """
-    <StandardListItem
-      title="{${1:titleProperty}}"
-      description="{${2:descriptionProperty}}" />
-    """
-  "xml.m.Table":
-    "prefix": "Table"
-    "body": """
-    <Table
-      headerText="${1:headerTextProperty}"
-      items="{${2:itemsAggregation}}">
-      <columns>
-        ${3:}
-      </columns>
-      <items>
-        ${4:}
-      </items>
-    </Table>
-    """
+".text.xml":
+	"xml.View":
+		"prefix": "xmlView"
+		"body":
+			"""
+			<mvc:View
+				xmlns:mvc="sap.ui.core.mvc"
+				displayBlock="true"
+				xmlns="sap.m">
+				$0
+			</mvc:View>
+			"""
+	"xml.m.IconTabBar":
+		"prefix": "IconTabBar"
+		"body":
+			"""
+			<IconTabBar>
+				<items>
+					${1:}
+				</items>
+			</IconTabBar>
+			"""
+	"xml.m.IconTabFilter":
+		"prefix": "IconTabFilter"
+		"body":
+			"""
+			<IconTabFilter
+				text="${1:textProperty}"
+				icon="sap-icon://${2:icon}">
+				<content>
+					${3:}
+				</content>
+			</IconTabFilter>
+			"""
+	"xml.m.List":
+		"prefix": "List"
+		"body":
+			"""
+			<List
+				id="${1:idList}"
+				mode="${2:SingleSelectMaster}"
+				select="${3:onListSelect}"
+				items="${4:itemsAggregation}">
+				<items>
+					${5:}
+				</items>
+			</List>
+			"""
+	"xml.m.ObjectAttributeF":
+		"prefix": "ObjectAttributeF"
+		"body":
+			"""
+			<ObjectAttribute
+				text="{
+					path: '${1:textProperty}',
+					formatter: '${2:formatter.identifier}'
+				}" />
+			"""
+	"xml.m.ObjectAttribute":
+		"prefix": "ObjectAttribute"
+		"body":
+			"""
+			<ObjectAttribute text="${1:textProperty}" />
+			"""
+	"xml.m.ObjectHeader":
+		"prefix": "ObjectHeader"
+		"body":
+			"""
+			<ObjectHeader
+				title="{${1:titleProperty}}"
+				number="{${2:numberProperty}}"
+				numberUnit="{${3:numberUnitProperty}}">
+				<attributes>
+					${4:}
+				</attributes>
+				<firstStatus>
+					${5:}
+				</firstStatus>
+			</ObjectHeader>
+			"""
+	"xml.m.ObjectIdentifier":
+		"prefix": "ObjectIdentifier"
+		"body":
+			"""
+			<ObjectIdentifier
+				title="{${1:titleProperty}}"
+				text="{${2:textProperty}}" />
+			"""
+	"xml.m.ObjectListItem":
+		"prefix": "ObjectListItem"
+		"body":
+			"""
+			<ObjectListItem
+				press="${1:onObjectListItemPress}"
+				title="{${2:titleProperty}}"
+				number="{${3:numberProperty}}"
+				numberUnit="{${4:numberUnitProperty}}">
+				<attributes>
+					${5:}
+				</attributes>
+				<firstStatus>
+					${6:}
+				</firstStatus>
+			</ObjectListItem>
+			"""
+	"xml.m.ObjectNumber":
+		"prefix": "ObjectNumber"
+		"body":
+			"""
+			<ObjectNumber
+				number="{${1:numberProperty}}"
+				unit="{${2:unitProperty}}"
+				state="{${3:stateProperty}}" />
+			"""
+	"xml.m.ObjectStatusF":
+		"prefix": "ObjectStatusF"
+		"body":
+			"""
+			<ObjectStatus
+				text="{${1:textProperty}}"
+				state="{
+					path: '${1:textProperty}',
+					formatter: 'formatter.identifier'
+				}" />
+			"""
+	"xml.m.ObjectStatus":
+		"prefix": "ObjectStatus"
+		"body":
+			"""
+			<ObjectStatus
+				text="{${1:textProperty}}"
+				state="{${2:stateProperty}}" />
+			"""
+	"xml.m.Page":
+		"prefix": "Page"
+		"body":
+			"""
+			<Page
+				title="${1:titleProperty}">
+				<content>
+					${2:}
+				</content>
+			</Page>
+			"""
+	"xml.m.SearchField":
+		"prefix": "SearchField"
+		"body":
+			"""
+			<SearchField
+				search="${1:onSearch}"
+				width="100%" />
+			"""
+	"xml.m.StandardListItem":
+		"prefix": "StandardListItem"
+		"body":
+			"""
+			<StandardListItem
+				title="{${1:titleProperty}}"
+				description="{${2:descriptionProperty}}" />
+			"""
+	"xml.m.Table":
+		"prefix": "Table"
+		"body":
+			"""
+			<Table
+				headerText="${1:headerTextProperty}"
+				items="{${2:itemsAggregation}}">
+				<columns>
+					${3:}
+				</columns>
+				<items>
+					${4:}
+				</items>
+			</Table>
+			"""
