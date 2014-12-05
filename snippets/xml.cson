@@ -1,4 +1,14 @@
-".text.xml":
+"text.xml":
+  "xml.View":
+    "prefix": "xmlView":
+    "body": """
+    <mvc:View
+    	xmlns:mvc="sap.ui.core.mvc"
+    	displayBlock="true"
+    	xmlns="sap.m">
+        $0
+    </mvc:View>
+    """
   "xml.m.IconTabBar":
     "prefix": "IconTabBar"
     "body": """
