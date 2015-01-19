@@ -1,119 +1,37 @@
 ".text.html":
 	"index.m.ui5starter":
 		"prefix": "ui5starter"
-		"body":
-			"""
-			<!DOCTYPE HTML>
-			<html>
-				<head>
-					<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-					<meta charset="UTF-8">
-
-					<title>${1:App Title}</title>
-				
-					<script id="sap-ui-bootstrap"
-						type="text/javascript"
-						src="/ui5/latest/resources/sap-ui-core.js"
-						data-sap-ui-theme="sap_bluecrystal"
-						data-sap-ui-libs="sap.m"
-						data-sap-ui-xx-bindingSyntax="complex"
-						data-sap-ui-resourceroots='{
-							"${2:namespace}" : "${3:./}"
-						}'
-					>
-					</script>
-
-					<script>
-
-						$0
-
-					</script>
-				</head>
-
-				<body id="content"
-					class="sapUiBody" />
-			</html>
-			<!-- Generated from the ui5-snippets package for Atom -->
-			<!-- More info: https://atom.io/packages/ui5-snippets -->
-			"""
-  "index.m":
-    "prefix": "ui5indexm"
-    "body": """
-      <!DOCTYPE HTML>
-      <html>
-        <head>
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <meta charset="UTF-8">
-
-          <title>${1:App Title}</title>
-
-          <script id="sap-ui-bootstrap"
-            type="text/javascript"
-            src="/ui5/latest/resources/sap-ui-core.js"
-            data-sap-ui-theme="${2:sap_bluecrystal}"
-            data-sap-ui-libs="${3:sap.m}"
-            data-sap-ui-xx-bindingSyntax="${5:complex}"
-          >
-          </script>
-
-          <script>
-
-          $0
-
-          </script>
-        </head>
-
-        <body class="sapUiBody" id="content" />
-      </html>
-    """
-  "index.m.spmvc":
-    "prefix": "ui5indexmspmvc"
-    "body": """
+		"body": """
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="UTF-8">
+\t<head>
+\t\t<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+\t\t<meta charset="UTF-8">
 
-    <title>${1:App Title}</title>
+\t\t<title>${1:App Title}</title>
 
-    <script id="sap-ui-bootstrap"
-      type="text/javascript"
-      src="/ui5/latest/resources/sap-ui-core.js"
-      data-sap-ui-theme="${2:sap_bluecrystal}"
-      data-sap-ui-libs="${3:sap.m}"
-      data-sap-ui-xx-bindingSyntax="${5:complex}"
-    >
-    </script>
+\t\t<script id="sap-ui-bootstrap"
+\t\t\ttype="text/javascript"
+\t\t\tsrc="/ui5/latest/resources/sap-ui-core.js"
+\t\t\tdata-sap-ui-theme="sap_bluecrystal"
+\t\t\tdata-sap-ui-libs="sap.m"
+\t\t\tdata-sap-ui-xx-bindingSyntax="complex"
+\t\t\tdata-sap-ui-resourceroots='{
+\t\t\t\t"${2:namespace}" : "${3:./}"
+\t\t\t}'
+\t\t>
+\t\t</script>
 
-    <script id="view1" type="ui5/xmlview">
-      <mvc:View
-        controllerName="local.controller"
-        xmlns:mvc="sap.ui.core.mvc"
-        xmlns="sap.m">
-          ${0:<!-- Add your XML-based controls here -->}
-      </mvc:View>
-    </script>
+\t\t<script>
 
-    <script>
+\t\t\t$0
 
-      sap.ui.controller("local.controller", {
+\t\t</script>
+\t</head>
 
-        onInit : function(oEvent) {
-          this.getView().setModel(new sap.ui.model.json.JSONModel({
-            $7
-          }));
-        }
-
-      });
-
-      var oView = sap.ui.xmlview({ viewContent: jQuery('#view1').html() });
-      oView.placeAt('content');
-
-    </script>
-
-  </head>
-
-  <body class="sapUiBody" id="content" />
+\t<body id="content"
+\t\tclass="sapUiBody" />
 </html>
-    """
+<!-- Generated from the ui5-snippets package for Atom -->
+<!-- More info: https://atom.io/packages/ui5-snippets -->
+"""
