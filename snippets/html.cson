@@ -1,6 +1,6 @@
 ".text.html":
-	"index.m.openui5starter":
-		"prefix": "openui5starter"
+	"index.m.ui5starter":
+		"prefix": "ui5starter"
 		"body":
 			"""
 			<!DOCTYPE HTML>
@@ -13,7 +13,7 @@
 				
 					<script id="sap-ui-bootstrap"
 						type="text/javascript"
-						src="/openui5/latest/resources/sap-ui-core.js"
+						src="/ui5/latest/resources/sap-ui-core.js"
 						data-sap-ui-theme="sap_bluecrystal"
 						data-sap-ui-libs="sap.m"
 						data-sap-ui-xx-bindingSyntax="complex"
