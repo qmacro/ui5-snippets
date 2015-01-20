@@ -46,9 +46,21 @@ sap.ui.controller("local.controller.${1:name}", {$0});
 	"sap.m.App":
 		"prefix": "app"
 		"body": """
-<App id=${1:app}>
+<App id="${1:app}">
 \t<pages>
 \t\t$0
 \t</pages>
 </App>
+"""
+	"sap.m.Page":
+		"prefix": "page"
+		"body": """
+<Page id="${1:page}"
+\ttitle="${2:title}">
+\t<content>
+\t</content>
+\t<footer>
+\t\t<Bar />
+\t</footer>
+</Page>
 """
