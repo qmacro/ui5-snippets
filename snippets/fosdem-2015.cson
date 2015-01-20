@@ -1,40 +1,4 @@
 ".text.html":
-	"index.m.ui5starter":
-		"prefix": "ui5starter"
-		"body": """
-<!DOCTYPE HTML>
-<html>
-\t<head>
-\t\t<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-\t\t<meta charset="UTF-8">
-
-\t\t<title>${1:App Title}</title>
-
-\t\t<script id="sap-ui-bootstrap"
-\t\t\ttype="text/javascript"
-\t\t\tsrc="/ui5/latest/resources/sap-ui-core.js"
-\t\t\tdata-sap-ui-theme="sap_bluecrystal"
-\t\t\tdata-sap-ui-libs="sap.m"
-\t\t\tdata-sap-ui-xx-bindingSyntax="complex"
-\t\t\tdata-sap-ui-resourceroots='{
-\t\t\t\t"${2:namespace}" : "${3:./}"
-\t\t\t}'
-\t\t>
-\t\t</script>
-
-\t\t<script>
-
-\t\t\t$0
-
-\t\t</script>
-\t</head>
-
-\t<body id="content"
-\t\tclass="sapUiBody" />
-</html>
-<!-- Generated from the ui5-snippets package for Atom -->
-<!-- More info: https://atom.io/packages/ui5-snippets -->
-"""
 	"local.xmlview":
 		"prefix": "localxmlview"
 		"body": """
@@ -78,55 +42,4 @@ sap.ui.controller("local.controller.${1:name}", {$0});
 \ticon="sap-icon://${1:icon}"
 \ttitle="${2:title}"
 \tdescription="${3:description}" />
-"""
-	"index.m.spmvc":
-		"prefix": "ui5indexmspmvc"
-		"body": """
-<!DOCTYPE HTML>
-<html>
-\t<head>
-\t\t<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-\t\t<meta charset="UTF-8">
-
-\t\t<title>${1:App Title}</title>
-
-\t\t<script id="sap-ui-bootstrap"
-\t\t\ttype="text/javascript"
-\t\t\tsrc="/ui5/latest/resources/sap-ui-core.js"
-\t\t\tdata-sap-ui-theme="sap_bluecrystal"
-\t\t\tdata-sap-ui-libs="sap.m"
-\t\t\tdata-sap-ui-xx-bindingSyntax="complex"
-\t\t>
-\t\t</script>
-
-\t\t<script id="${2:main}" type="ui5/xmlview">
-\t\t\t<mvc:View
-\t\t\t\tcontrollerName="local.controller.${2:main}"
-\t\t\t\txmlns:mvc="sap.ui.core.mvc"
-\t\t\t\txmlns="sap.m">
-\t\t\t\t\t${0:<!-- Add your XML-based controls here -->}
-\t\t\t</mvc:View>
-\t\t</script>
-
-\t\t<script>
-
-\t\t\tsap.ui.controller("local.controller.${2:main}", {
-
-\t\t\t\tonInit : function(oEvent) {
-\t\t\t\t\tthis.getView().setModel(new sap.ui.model.json.JSONModel({
-\t\t\t\t\t\t$3
-\t\t\t\t\t}));
-\t\t\t\t}
-
-\t\t\t});
-
-\t\t\tvar oView = sap.ui.xmlview({ viewContent: jQuery("#${2:main}").html() });
-\t\t\toView.placeAt('content');
-
-\t\t</script>
-
-\t</head>
-
-\t<body class="sapUiBody" id="content" />
-</html>
 """
