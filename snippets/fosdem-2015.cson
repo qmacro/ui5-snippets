@@ -35,6 +35,50 @@
 <!-- Generated from the ui5-snippets package for Atom -->
 <!-- More info: https://atom.io/packages/ui5-snippets -->
 """
+	"local.xmlview":
+		"prefix": "localxmlview"
+		"body": """
+<script id="${1:name}" type="ui5/xmlview">
+\t<mvc:View
+\t\tcontrollerName="local.controller.${1:name}"
+\t\tdisplayBlock="true"
+\t\txmlns:mvc="sap.ui.core.mvc"
+\t\txmlns="sap.m">
+\t\t$0
+\t</mvc:View>
+</script>
+"""
+	"local.startup":
+		"prefix": "localstartup"
+		"body": """
+sap.ui.xmlview({ viewContent: jQuery("#${1:name}").html() })
+\t.placeAt("content");
+"""
+	"local.controller":
+		"prefix": "localcontroller"
+		"body": """
+sap.ui.controller("local.controller.${1:name}", {$0});
+"""
+	"sap.m.list":
+		"prefix": "list"
+		"body": """
+<List id="${1:id}"
+\titems="{
+\t\tpath : '${2:items}'
+\t}">
+\t<items>
+\t\t$0
+\t</items>
+</List>
+"""
+	"sap.m.standardlistitem":
+		"prefix": "standardlistitem"
+		"body": """
+<StandardListItem
+\ticon="sap-icon://${1:icon}"
+\ttitle="${2:title}"
+\tdescription="${3:description}" />
+"""
 	"index.m.spmvc":
 		"prefix": "ui5indexmspmvc"
 		"body": """
@@ -68,7 +112,7 @@
 
 \t\t\tsap.ui.controller("local.controller.${2:main}", {
 
-\t\t\t\tonInit : xfunction(oEvent) {
+\t\t\t\tonInit : function(oEvent) {
 \t\t\t\t\tthis.getView().setModel(new sap.ui.model.json.JSONModel({
 \t\t\t\t\t\t$3
 \t\t\t\t\t}));
