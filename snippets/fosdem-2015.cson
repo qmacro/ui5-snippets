@@ -58,7 +58,7 @@ sap.ui.controller("local.controller.${1:name}", {$0});
 <Page id="${1:page}"
 \ttitle="${2:title}">
 \t<content>
-\t$0
+\t\t$0
 \t</content>
 \t<footer>
 \t\t<Bar />
@@ -70,5 +70,24 @@ sap.ui.controller("local.controller.${1:name}", {$0});
 		"body": """
 mode="${1:SingleSelectMaster}"
 selectionChange="${2:onSelectionChange}"
+"""
+	"this get view by Id":
+		"prefix": "tvgbid"
+		"body": """
+this.getView().byId("${1:id}")$0
+"""
+	"sap.m.ObjectHeader":
+		"prefix": "objectheader"
+		"body": """
+<ObjectHeader
+\ticon="sap-icon://${1:icon}"
+\ttitle="${2:title}"
+\tnumber="${3:number}"
+\tnumberUnit="${4:numberUnit}">
+\t<attributes>
+\t\t<ObjectAttribute
+\t\t\ttext="${5:text}" />
+\t\t</attributes>
+</ObjectHeader>
 """
 
