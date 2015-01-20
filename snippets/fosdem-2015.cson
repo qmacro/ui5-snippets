@@ -43,3 +43,12 @@ sap.ui.controller("local.controller.${1:name}", {$0});
 \ttitle="${2:title}"
 \tdescription="${3:description}" />
 """
+	"sap.m.App":
+		"prefix": "app"
+		"body": """
+<App id=${1:app}>
+\t<pages>
+\t\t$0
+\t</pages>
+</App>
+"""
