@@ -58,9 +58,17 @@ sap.ui.controller("local.controller.${1:name}", {$0});
 <Page id="${1:page}"
 \ttitle="${2:title}">
 \t<content>
+\t$0
 \t</content>
 \t<footer>
 \t\t<Bar />
 \t</footer>
 </Page>
 """
+	"sap.m.List selection":
+		"prefix": "listselection"
+		"body": """
+mode="${1:SingleSelectMaster}"
+selectionChange="${2:onSelectionChange}"
+"""
+
