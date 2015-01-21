@@ -72,7 +72,7 @@ mode="${1:SingleSelectMaster}"
 selectionChange="${2:onSelectionChange}"
 """
 	"this get view by Id":
-		"prefix": "tvgbid"
+		"prefix": "tgvbid"
 		"body": """
 this.getView().byId("${1:id}")$0
 """
@@ -81,12 +81,14 @@ this.getView().byId("${1:id}")$0
 		"body": """
 <ObjectHeader
 \ticon="sap-icon://${1:icon}"
-\ttitle="${2:title}"
-\tnumber="${3:number}"
-\tnumberUnit="${4:numberUnit}">
+\tintro="${2:intro}"
+\ttitle="${3:title}"
+\tnumber="${4:number}"
+\tnumberUnit="${5:numberUnit}">
 \t<attributes>
 \t\t<ObjectAttribute
-\t\t\ttext="${5:text}" />
+\t\t\ttitle="${6:title}" />
+\t\t\ttext="${7:text}" />
 \t\t</attributes>
 </ObjectHeader>
 """
