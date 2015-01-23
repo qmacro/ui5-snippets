@@ -81,15 +81,43 @@ this.getView().byId("${1:id}")$0
 		"body": """
 <ObjectHeader
 \ticon="sap-icon://${1:icon}"
-\tintro="${2:intro}"
-\ttitle="${3:title}"
+\ttitle="${2:title}"
+\tintro="${3:intro}"
 \tnumber="${4:number}"
 \tnumberUnit="${5:numberUnit}">
 \t<attributes>
 \t\t<ObjectAttribute
-\t\t\ttitle="${6:title}" />
+\t\t\ttitle="${6:title}"
 \t\t\ttext="${7:text}" />
 \t\t</attributes>
 </ObjectHeader>
 """
-
+	"sap.m.Page navbutton":
+		"prefix": "navbutton"
+		"body": """
+showNavButton="${1:true}"
+navButtonPress="${2:onNavButtonPress}"
+"""
+	"confer binding context":
+		"prefix": "conferbinding"
+		"body": """
+${1:to}.setBindingContext(${2:from}.getBindingContext());
+"""
+	"onInit method content":
+		"prefix": "oninit"
+		"body": """
+this.oApp = this.getView().byId("${1:app}");$0
+"""
+	"onSelectionChange method content":
+		"prefix": "onselectionchange"
+		"body": """
+var oSelected = oEvent.getParameter("listItem"),
+\toTarget = this.oApp.getPages()[1];
+oTarget.setBindingContext(oSelected.getBindingContext());
+this.oApp.to(oTarget.getId());
+"""
+	"livereload script reference":
+		"prefix": "livereload"
+		"body": """
+<script src="http://localhost:${1:35729}/livereload.js"></script>
+"""
