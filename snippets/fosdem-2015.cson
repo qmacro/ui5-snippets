@@ -121,3 +121,15 @@ this.oApp.to(oTarget.getId());
 		"body": """
 <script src="http://localhost:${1:35729}/livereload.js"></script>
 """
+	"i18n model":
+		"prefix": "i18nmodel"
+		"body": """
+.setModel(new sap.ui.model.resource.ResourceModel({
+\tbundleUrl : "${1:i18n/text.properties}"
+}), "${2:i18n}")
+"""
+	"domain model":
+		"prefix": "domainmodel"
+		"body": """
+.setModel(new sap.ui.model.json.JSONModel("${1:talks.json}"))
+"""
