@@ -173,3 +173,17 @@
 				</items>
 			</Table>
 			"""
+  "xml.m.Button":
+    "prefix": "Button"
+    "body": """
+    <Button
+      text="${1:buttonText}"
+      type="${2:Default}"
+      press="${3:onButtonPress}" />
+    """
+  "xml.m.Text":
+    "prefix": "Text"
+    "body": """
+    <Text
+      text="${1:text}" />
+    """
