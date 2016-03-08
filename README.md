@@ -31,6 +31,8 @@ A package of snippets for [SAPUI5](sapui5.hana.ondemand.com/sdk/) and [OpenUI5](
  * `SearchField` - [sap.m.SearchField](https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SearchField.html)
  * `StandardListItem` - [sap.m.StandardListItem](https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.StandardListItem.html)
  * `Table` - [sap.m.Table](https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Table.html)
+ * `Button` - [sap.m.Button](https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Button.html)
+ * `Text` - [sap.m.Text](https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Text.html)
 
 ## HTML
 
