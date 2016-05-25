@@ -56,3 +56,78 @@
 				}
 			});
 			"""
+	"js.controller":
+		"prefix": "controller"
+		"body":
+			"""
+			sap.ui.define([
+				"sap/ui/core/mvc/Controller"
+			], function(Controller) {
+				"use strict";
+
+				return Controller.extend("${1:namespace}", {
+					onInit: function() {
+						${2:}
+					},
+					onBeforeRendering: function() {
+
+					},
+					onAfterRendering: function() {
+
+					},
+					onExit: function() {
+
+					}
+				});
+
+			});
+			"""
+	"js.getOwnerComponent":
+		"prefix": "getOwnerComponent"
+		"body":
+			"""
+			sap.ui.component( sap.ui.core.Component.getOwnerIdFor( this.getView() ) );
+			"""
+	"js.getRouter":
+		"prefix": "getRouter"
+		"body":
+			"""
+			sap.ui.core.UIComponent.getRouterFor( ${1:this} );
+			"""
+	"js.readOdataModel":
+		"prefix": "readOdataModel"
+		"body":
+			"""
+			${1:oDataModel}.read("${2:path}", {
+			  async : true,
+			  success : $.proxy(function(data, response) {
+				${3:}
+			  }, this),
+			  error : $.proxy(function(error) {
+
+			  })
+			});
+			"""
+	"js.readOdataModelBatch":
+		"prefix": "readOdataModelBatch"
+		"body":
+			"""
+			 var batchOps = [];
+			 batchOps.push(${1:oDataModel}.createBatchOperation("${2:path}", "GET"));
+			 ${3:oDataModel}.addBatchReadOperations(batchOps);
+			 ${4:oDataModel}.submitBatch(function(data) {
+			   	data.__batchResponses[0].data.results.forEach(function(k){
+
+			 	});
+			 },function(error){
+
+			 });
+			"""
+	"js.navTo":
+		"prefix": "navTo"
+		"body":
+			"""
+			${1:oRouter}.navTo( "${2:routePattern}", {
+				${3:data}
+			} );
+			"""

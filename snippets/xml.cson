@@ -1,5 +1,163 @@
 ".text.xml":
-	"xml.View":
+# xml.ui.core
+	"xml.ui.core.Fragment":
+		"prefix": "Fragment"
+		"body":
+			"""
+			<core:Fragment
+				fragmentName="${1:}" type="XML" />
+			"""
+	"xml.ui.core.FragmentDefinition":
+		"prefix": "FragmentDefinition"
+		"body":
+			"""
+			<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core">
+				$0
+			</core>
+			"""
+	"xml.ui.core.View":
+		"prefix": "View"
+		"body":
+			"""
+			<core:View controllerName="${1:}" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+				${2:}
+			</core:View>
+			"""
+#xml.ui.layout
+	"xml.ui.layout.BlockLayout":
+		"prefix": "BlockLayout"
+		"body":
+			"""
+			<l:BlockLayout background="${1:}">
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell
+						width="${2:}"
+						title="${3:}">
+						${4:}
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+			</l:BlockLayout>
+			"""
+	"xml.ui.layout.BlockLayoutCell":
+		"prefix": "BlockLayoutCell"
+		"body":
+			"""
+			<l:BlockLayoutCell
+				width="${1:}"
+				title="${2:}">
+				${3:}
+			</l:BlockLayoutCell>
+			"""
+	"xml.ui.layout.BlockLayoutRow":
+		"prefix": "BlockLayoutRow"
+		"body":
+			"""
+			<l:BlockLayoutRow>
+				${1:}
+			</l:BlockLayoutRow>
+			"""
+	"xml.ui.layout.DynamicSideContent":
+		"prefix": "DynamicSideContent"
+		"body":
+			"""
+			<l:DynamicSideContent
+				sideContentFallDown="${1:BelowM}"
+				containerQuery="${2:true}"
+				breakpointChanged="${3:updateToggleButtonState}">
+					<l:mainContent>
+						${4:}
+					</l:mainContent>
+					<l:sideContent>
+						${5:}
+					</l:sideContent>
+			</l:DynamicSideContent>
+			"""
+	"xml.ui.layout.FixFlex":
+		"prefix": "FixFlex"
+		"body":
+			"""
+			<l:FixFlex>
+				<l:fixContent>
+					${1:}
+				</l:fixContent>
+				<l:flexContent>
+					${2:}
+				</l:flexContent>
+			</l:FixFlex>
+			"""
+	"xml.ui.layout.Grid":
+		"prefix": "Grid"
+		"body":
+			"""
+			<l:Grid
+				binding="${1:}"
+				hSpacing="${2:2}"
+				defaultSpan="${3:L6 M6 S10}">
+				<l:content>
+					${4:}
+				</l:content>
+			</l:Grid>
+			"""
+	"xml.ui.layout.GridData":
+		"prefix": "GridData"
+		"body":
+			"""
+			<l:GridData
+				span="${1:L3 M3 S8}"
+				linebreakL="${2:true}"
+				linebreakM="${3:true}"
+				linebreakS="${4:true}" />
+			"""
+	"xml.ui.layout.HorizontalLayout":
+		"prefix": "HorizontalLayout"
+		"body":
+			"""
+			<l:HorizontalLayout>
+				${1:}
+			</l:HorizontalLayout>
+			"""
+	"xml.ui.layout.Splitter":
+		"prefix": "Splitter"
+		"body":
+			"""
+			<l:Splitter height="${1:}">
+				${2:}
+			</l:Splitter>
+			"""
+	"xml.ui.layout.SplitterLayoutData":
+		"prefix": "SplitterLayoutData"
+		"body":
+			"""
+			<l:SplitterLayoutData size="${1:auto}" />
+			"""
+	"xml.ui.layout.VerticalLayout":
+		"prefix": "VerticalLayout"
+		"body":
+			"""
+			<l:VerticalLayout>
+				${1:}
+			</l:VerticalLayout>
+			"""
+#xml.ui.layout.form
+	"xml.ui.layout.form.SimpleForm":
+		"prefix": "SimpleForm"
+		"body":
+			"""
+			<form:SimpleForm
+				columnsL="${1:}"
+				columnsM="${2:}"
+				columnsS="${3:}"
+				editable="${4:true}"
+				layout="ResponsiveGridLayout">
+				<form:content>
+					<core:Title text=""/>
+					<Label text=""/>
+					<Input />${5:}
+				</form:content>
+			</form:SimpleForm>
+			"""
+# xml.mvc
+	"xml.mvc.View":
 		"prefix": "xmlView"
 		"body":
 			"""
@@ -10,13 +168,350 @@
 				$0
 			</mvc:View>
 			"""
+# xml.m Alphabetical order, A:
+	"xml.m.ActionListItem":
+		"prefix":"ActionListItem"
+		"body":
+			"""
+			<ActionListItem text="${1:}" />
+			"""
+	"xml.m.ActionSelect":
+		"prefix":"ActionSelect"
+		"body":
+			"""
+			<ActionSelect
+				items="{
+					path: '${1:}',
+					sorter: { path: '${2:}' }
+				}">
+				<items>
+					<core:Item key="{${3:}}" text="{${4:}}" />
+				</items>
+			</ActionSelect>
+			"""
+	"xml.m.ActionSheet":
+		"prefix":"ActionSheet"
+		"body":
+			"""
+			<ActionSheet
+			title="${1:textProperty}"
+			showCancelButton="${2:true}"
+			cancelButtonText="${3:Cancel}"
+			placement="Bottom">
+				<buttons>
+					<Button text="Reject" icon="sap-icon://decline" />${4:}
+				</buttons>
+			</ActionSheet>
+			"""
+	"xml.m.App":
+		"prefix":"App"
+		"body":
+			"""
+			<App id="${1:}" showHeader="${2:false}">
+			</App>
+			"""
+# xml.m Alphabetical order, B:
+	"xml.m.Bar":
+		"prefix":"Bar"
+		"body":
+			"""
+			<Bar>
+				<contentLeft>
+					${1:}
+				</contentLeft>
+				<contentMiddle>
+					${2:}
+				</contentMiddle>
+				<contentRight>
+					${3:}
+				</contentRight>
+			</Bar>
+			"""
+	"xml.m.Breadcrumbs":
+		"prefix":"Breadcrumbs"
+		"body":
+			"""
+			<Breadcrumbs currentLocationText="Laptop">
+				<Link press="onPress" text="${1:}"/>
+				<Link press="onPress" text="${2:}"/>
+			</Breadcrumbs>
+			"""
+	"xml.m.BusyDialog":
+		"prefix":"BusyDialog"
+		"body":
+			"""
+			<BusyDialog
+				title="${1:}"
+				text="${2:}"
+				showCancelButton="${3:true}"
+				close="onDialogClosed"/>
+			"""
+	"xml.m.BusyIndicator":
+		"prefix":"BusyIndicator"
+		"body":
+			"""
+			<BusyIndicator
+				text="${1:}"
+				size="${2:1rem}"
+				customIcon="${3:URI}
+				customIconWidth="${4:44px}"
+				customIconHeight="${5:44px}"
+				customIconRotationSpeed="${6:1000}"/>
+			"""
+	"xml.m.Button":
+		"prefix":"Button"
+		"body":
+			"""
+			<Button type="${1:}" press="${2:}" text="${3:}" icon="${4:}"/>
+			"""
+# xml.m Alphabetical order, C:
+	"xml.m.Carousel":
+		"prefix":"Carousel"
+		"body":
+			"""
+			<Carousel loop="${1:true}" pageIndicatorPlacement="${2:Bottom}" showPageIndicator="${3:true}">
+				<pages>
+					<Image src="{img>/products/pic1}" alt="Example picture of speakers"/>
+					<Image src="{img>/products/pic2}" alt="Example picture of USB flash drive"/>
+					${2:}
+				</pages>
+			</Carousel>
+			"""
+	"xml.m.CheckBox":
+		"prefix":"CheckBox"
+		"body":
+			"""
+			<CheckBox text="${1:}" selected="${2:}" />
+			"""
+	"xml.m.ComboBox":
+		"prefix":"ComboBox"
+		"body":
+			"""
+			<ComboBox
+				showSecondaryValues="${1:true}"
+				selectedKey="{ path: '${2:}' }"
+				items="{
+					path: '${3:}',
+					sorter: { path: '${4:}' }
+				}">
+				<core:ListItem key="{${5:}}" text="{${6:}}" additionalText="{${7:}}"/>
+			</ComboBox>
+			"""
+	"xml.m.CustomList":
+		"prefix":"CustomList"
+		"body":
+			"""
+			<List items="{path: '${1:}'}" >
+				<CustomListItem>
+					${2:}
+				</CustomListItem>
+			</List>
+			"""
+# xml.m Alphabetical order, D:
+	"xml.m.DatePicker":
+		"prefix":"DatePicker"
+		"body":
+			"""
+			<DatePicker displayFormat="${1:yyyy-MM-dd}" value="${2:}" valueFormat="${3:yyyy-MM-dd}" placeholder="${4:yyyy-MM-dd}"/>
+			"""
+	"xml.m.DateRangeSelection":
+		"prefix":"DateRangeSelection"
+		"body":
+			"""
+			<DateRangeSelection
+				delimiter="{path:'${1:}'}"
+				dateValue="{path:'${2:}'}"
+				secondDateValue="{path:'${3:}'}"
+				displayFormat="{path:'${4:}'}"
+				change="${5:handleChange}"
+			/>
+			"""
+	"xml.m.Dialog":
+		"prefix":"Dialog"
+		"body":
+			"""
+			<Dialog title="${1:}" class="sapUiPopupWithPadding" contentHeight="${2:30rem}">
+		        <content>
+		            ${3:}
+		        </content>
+		        <buttons>
+		            <Button text="${4:}" press="${5:handlePress}"/>
+		        </buttons>
+		    </Dialog>
+			"""
+	"xml.m.DraftIndicator":
+		"prefix":"DraftIndicator"
+		"body":
+			"""
+			<DraftIndicator minDisplayTime="${1:1500}" state="${2:Clear}" />
+			"""
+# xml.m Alphabetical order, E:
+# xml.m Alphabetical order, F:
+	"xml.m.FacetFilter":
+		"prefix":"FacetFilter"
+		"body":
+			"""
+			<FacetFilter
+				type="${1:Light}"
+				showPersonalization="${2:true}"
+				showPopoverOKButton="${3:false}"
+				showReset="${4:true}"
+				showSummaryBar="${5:false}"
+				reset="${6:handleFacetFilterReset}"
+				lists="{${7:}}">
+				<lists>
+					<FacetFilterList
+						title="{${8:}}"
+						key="{${9:}}"
+						multiselect="${10:true}"
+						listClose="${11:handleListClose}"
+						items="{${12:}}" >
+						<items>
+							<FacetFilterItem
+								text="{${13:}}"
+								key="{${14:}}"
+								count="{${15:}}" />
+						</items>
+					</FacetFilterList>
+				</lists>
+			</FacetFilter>
+			"""
+	"xml.m.FacetFilterItem":
+		"prefix":"FacetFilterItem"
+		"body":
+			"""
+			<FacetFilterItem
+				text="{${1:}}"
+				key="{${2:}}"
+				count="{${3:}}" />
+			"""
+	"xml.m.FacetFilterList":
+		"prefix":"FacetFilterList"
+		"body":
+			"""
+			<FacetFilterList
+				title="{${1:}}"
+				key="{${2:}}"
+				multiselect="${3:true}"
+				listClose="${4:handleListClose}"
+				items="{${5:}}"
+				listOpen="${6:handleListOpen}">
+				<items>
+					<FacetFilterItem
+						text="{${7:}}"
+						key="{${8:}}"
+						count="{${9:}}" />
+				</items>
+			</FacetFilterList>
+			"""
+	"xml.m.FacetFilterList":
+		"prefix":"FacetFilterList"
+		"body":
+			"""
+			<FacetFilterList
+				title="{${1:}}"
+				key="{${2:}}"
+				multiselect="${3:true}"
+				listClose="${4:handleListClose}"
+				items="{${5:}}"
+				listOpen="${6:handleListOpen}"
+				dataType="${7:String}">
+				<items>
+					<FacetFilterItem
+						text="{${8:}}"
+						key="{${9:}}"
+						count="{${10:}}" />
+				</items>
+			</FacetFilterList>
+			"""
+	"xml.m.FeedContent":
+		"prefix":"FeedContent"
+		"body":
+			"""
+			<FeedContent
+				contentText="${1:}"
+				subheader="${2:}"
+				size="${3:M}"
+				press="${4:press}"
+				value="${5:}"
+				valueColor="${5:}">
+			</FeedContent>
+			"""
+	"xml.m.FeedInput":
+		"prefix":"FeedInput"
+		"body":
+			"""
+			<FeedInput
+				post="${1:onPost}"
+				showIcon="${2:true}"
+				icon="${3:URI}"
+				placeholder="${4:}" />
+			"""
+	"xml.m.FeedListItem":
+		"prefix":"FeedListItem"
+		"body":
+			"""
+			<FeedListItem
+				sender="{${1:}}"
+				icon="{${2:}}"
+				senderPress="${3:onPress}"
+				iconPress="${4:onPress}"
+				iconDensityAware="${5:false}"
+				info="{${6:}}"
+				timestamp="{${7:}}"
+				text="{${8:}}" />
+			"""
+	"xml.m.FlexBox":
+		"prefix":"FlexBox"
+		"body":
+			"""
+			<FlexBox
+				alignItems="${1:Start}"
+				justifyContent="${2:Start}"
+				direction="${3:Row}"
+				displayInline="${4:false}">
+				<items>
+					${5:}
+				</items>
+			</FlexBox>
+			"""
+# xml.m Alphabetical order, G:
+	"xml.m.GenericTile":
+		"prefix":"GenericTile"
+		"body":
+			"""
+			<GenericTile header="${1:}" size="${2:S}" frameType="${3:OneByOne}"
+				press="${4:press}">
+				<tileContent>
+					<TileContent unit="${5:EUR}" size="${6:S}">
+						<content>
+							<NumericContent size="${7:S}" scale="${8:B}" value="${9:999}"
+								valueColor="${10:Good}" indicator="${11:Up}" />
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+			"""
+# xml.m Alphabetical order, H:
+	"xml.m.HBox":
+		"prefix":"HBox"
+		"body":
+			"""
+			<HBox>
+				${1:}
+			</HBox>
+			"""
+# xml.m Alphabetical order, I:
 	"xml.m.IconTabBar":
 		"prefix": "IconTabBar"
 		"body":
 			"""
 			<IconTabBar>
 				<items>
-					${1:}
+					<IconTabFilter
+						icon="sap-icon://${1:hint}">
+						${2:}
+					</IconTabFilter>
 				</items>
 			</IconTabBar>
 			"""
@@ -32,6 +527,49 @@
 				</content>
 			</IconTabFilter>
 			"""
+	"xml.m.Image":
+		"prefix": "Image"
+		"body":
+			"""
+			<Image src="${1:}" densityAware="${2:false}" width="${3:100%}" />
+			"""
+	"xml.m.Input":
+		"prefix": "Input"
+		"body":
+			"""
+			<Input type="${1:Text}" placeholder="${2:}" />
+			"""
+	"xml.m.InputListItem":
+		"prefix": "InputListItem"
+		"body":
+			"""
+			<InputListItem label="${1:}">
+				${2:}
+			</InputListItem>
+			"""
+# xml.m Alphabetical order, J:
+# xml.m Alphabetical order, K:
+# xml.m Alphabetical order, L:
+	"xml.m.Label":
+		"prefix": "Label"
+		"body":
+			"""
+			<Label text="${1:}" />
+			"""
+	"xml.m.layoutData":
+		"prefix": "layoutData"
+		"body":
+			"""
+			<layoutData>
+				${1:}
+			</layoutData>
+			"""
+	"xml.m.Link":
+		"prefix": "Link"
+		"body":
+			"""
+			<Link text="${1:}" href="${2:}" />
+			"""
 	"xml.m.List":
 		"prefix": "List"
 		"body":
@@ -46,6 +584,134 @@
 				</items>
 			</List>
 			"""
+# xml.m Alphabetical order, M:
+	"xml.m.MaskInput":
+		"prefix": "MaskInput"
+		"body":
+			"""
+			<MaskInput mask = "${1:~~~~~~~~~~}" placeholderSymbol = "${2:_}" placeholder = "${3:}" >
+				<rules>
+					<MaskInputRule maskFormatSymbol = "${4:~}" regex = "${5:[^_]}"/>
+				</rules>
+			</MaskInput>
+			"""
+	"xml.m.MaskInputRule":
+		"prefix": "MaskInputRule"
+		"body":
+			"""
+			<MaskInputRule maskFormatSymbol = "${1:~}" regex = "${2:[^_]}"/>
+			"""
+	"xml.m.MessagePage":
+		"prefix": "MessagePage"
+		"body":
+			"""
+			<MessagePage showHeader="${1:false}" icon="${2:}" showNavButton="${3:false}" text="${4:}"/>
+			"""
+	"xml.m.MessageStrip":
+		"prefix": "MessageStrip"
+		"body":
+			"""
+			<MessageStrip
+				text="${1:}"
+				showIcon="${2:true}"
+				showCloseButton="${3:true}"
+				type="${4:}">
+			</MessageStrip>
+			"""
+	"xml.m.MultiComboBox":
+		"prefix": "MultiComboBox"
+		"body":
+			"""
+			<MultiComboBox selectionChange="${1:handleSelectionChange}" selectionFinish="${2:handleSelectionFinish}"
+				items="{
+		                    path: '${3:}',
+		                    sorter: { path: '${4:}' }
+		                }">
+				<core:Item key="${5:}" text="${6:}" />
+			</MultiComboBox>
+			"""
+	"xml.m.MultiInput":
+		"prefix": "MultiInput"
+		"body":
+			"""
+			<MultiInput suggestionItems="{
+				path: '${1:}',
+				sorter: { path: '${2:}' }
+				}"
+			showValueHelp="${3:false}">
+				<core:Item key="${4:}" text="${5:}" />
+			</MultiInput>
+			"""
+# xml.m Alphabetical order, N:
+	"xml.m.NavContainer":
+		"prefix": "NavContainer"
+		"body":
+			"""
+			<NavContainer
+			id="${1:}"
+			width="${2:98%}"
+			height="${3:16em}">
+				<Page></Page>${4:}
+			</NavContainer>
+			"""
+	"xml.m.NewsContent":
+		"prefix": "NewsContent"
+		"body":
+			"""
+			<NewsContent
+				contentText="${1:}"
+				subheader="${2:}" size="${3:M}" press="${4:press}">
+			</NewsContent>
+			"""
+	"xml.m.NotificationListGroup":
+		"prefix": "NotificationListGroup"
+		"body":
+			"""
+			<NotificationListGroup
+					title="${1:}"
+					datetime="${2:}"
+					showCloseButton="${3:true}"
+					authorName="${4:}"
+					authorPicture="${5:}"
+					collapsed="${6:false}"
+					>
+				<items>
+					${7:}
+				</items>
+				<buttons>
+					${8:}
+				</buttons>
+			</NotificationListGroup>
+			"""
+	"xml.m.NotificationListItem":
+		"prefix": "NotificationListItem"
+		"body":
+			"""
+			<NotificationListItem
+					title="${1:}"
+					description="${2:}"
+					showCloseButton="${3:true}"
+					datetime="${4:}"
+					unread="${5:true}"
+					priority="${6:High}"
+					close="${7:onItemClose}"
+					press="${8:onListItemPress}"
+					authorName="${9:}"
+					authorPicture="${10:}"
+					>
+				<buttons>
+					${11:}
+				</buttons>
+			</NotificationListItem>
+			"""
+	"xml.m.NumericContent":
+		"prefix": "NumericContent"
+		"body":
+			"""
+			<NumericContent size="${1:M}" value="${2:0}" scale="${3:MM}"
+				valueColor="${4:Error}" indicator="${5:Down}" state="${6:Loaded}" icon="${7:}" press="${8:press}" />
+			"""
+# xml.m Alphabetical order, O:
 	"xml.m.ObjectAttributeF":
 		"prefix": "ObjectAttributeF"
 		"body":
@@ -131,6 +797,23 @@
 				text="{${1:textProperty}}"
 				state="{${2:stateProperty}}" />
 			"""
+	"xml.m.OverflowToolbar":
+		"prefix": "OverflowToolbar"
+		"body":
+			"""
+			<OverflowToolbar>
+				${1:}
+			</OverflowToolbar>
+			"""
+	"xml.m.OverflowToolbarLayoutData":
+		"prefix": "OverflowToolbarLayoutData"
+		"body":
+			"""
+			<layoutData>
+				<OverflowToolbarLayoutData priority="${1:NeverOverflow}" />
+			</layoutData>
+			"""
+# xml.m Alphabetical order, P:
 	"xml.m.Page":
 		"prefix": "Page"
 		"body":
@@ -142,6 +825,138 @@
 				</content>
 			</Page>
 			"""
+	"xml.m.Panel":
+		"prefix": "Panel"
+		"body":
+			"""
+			<Panel expandable="${1:true}" headerText="${2:}" expanded="${3:false}">
+		        <content>
+					${4:}
+				</content>
+			</Panel>
+			"""
+	"xml.m.Popover":
+		"prefix": "Popover"
+		"body":
+			"""
+			<Popover
+				title="${1:}"
+				placement="${2:Bottom}">
+				${3:}
+			</Popover>
+			"""
+	"xml.m.ProgressIndicator":
+		"prefix": "ProgressIndicator"
+		"body":
+			"""
+			<ProgressIndicator
+				percentValue="${1:30}"
+				displayValue="${2:30%}"
+				showValue="${3:true}"
+				state="${4:None}" />
+			"""
+# xml.m Alphabetical order, Q:
+	"xml.m.QuickView":
+		"prefix": "QuickView"
+		"body":
+			"""
+			<QuickView pages="{ path : '${1:}', templateShareable : '${2:true}'}">
+				${3:}
+			</QuickView>
+			"""
+	"xml.m.QuickViewPage":
+		"prefix": "QuickViewPage"
+		"body":
+			"""
+			<QuickViewPage
+				pageId="${1:}"
+				header="${2:}"
+				icon="${3:}"
+				title="${4:}"
+				titleUrl="${5:}"
+				description="${6:}"
+				groups="{ path : '${7:}', templateShareable : '${8:true}'}">
+				${9:}
+			</QuickViewPage>
+			"""
+	"xml.m.QuickViewGroup":
+		"prefix": "QuickViewGroup"
+		"body":
+			"""
+			<QuickViewGroup heading="${1:}" elements="{ path : '${2:}', templateShareable : '${3:true}'}">
+				${4:}
+			</QuickViewGroup>
+			"""
+	"xml.m.QuickViewGroupElement":
+		"prefix": "QuickViewGroupElement"
+		"body":
+			"""
+			<QuickViewGroupElement
+					label="${1:}"
+					value="${2:}"
+					url="${3:}"
+					type="${4:}"
+					pageLinkId="${5:}"
+					emailSubject="${6:}"
+					target="${7:}"
+					>
+			</QuickViewGroupElement>
+			"""
+# xml.m Alphabetical order, R:
+	"xml.m.RadionButton":
+		"prefix": "RadionButton"
+		"body":
+			"""
+			<RadionButton groupName="${1:}" text="${2:}" selected="${3:false}" />
+			"""
+	"xml.m.RadioButtonGroup":
+		"prefix": "RadioButtonGroup"
+		"body":
+			"""
+			<RadioButtonGroup columns="${1:}">
+				<buttons>
+					<RadioButton text="${2:}"></RadioButton>
+				</buttons>
+			</RadioButtonGroup>
+			"""
+	"xml.m.RatingIndicator":
+		"prefix": "RatingIndicator"
+		"body":
+			"""
+			<RatingIndicator maxValue="${1:5}" value="${2:3.5}" tooltip="${3:}" />
+			"""
+	"xml.m.ResponsivePopover":
+		"prefix": "ResponsivePopover"
+		"body":
+			"""
+			<ResponsivePopover
+				title="${1:}"
+				placement="${2:Bottom}" >
+				<beginButton>
+					${3:}
+				</beginButton>
+				<endButton>
+					${4:}
+				</endButton>
+				<content>
+					${5:}
+				</content>
+			</ResponsivePopover>
+			"""
+# xml.m Alphabetical order, S:
+	"xml.m.ScrollContainer":
+		"prefix": "ScrollContainer"
+		"body":
+			"""
+			<ScrollContainer
+				height="${1:100%}"
+				width="${2:100%}"
+				horizontal="${3:true}"
+				vertical="${4:true}"
+				focusable="${5:true}">
+				${6:}
+			</ScrollContainer>
+			"""
 	"xml.m.SearchField":
 		"prefix": "SearchField"
 		"body":
@@ -150,13 +965,165 @@
 				search="${1:onSearch}"
 				width="100%" />
 			"""
+	"xml.m.SegmentedButton":
+		"prefix": "SegmentedButton"
+		"body":
+			"""
+			<SegmentedButton selectedKey="${1:}">
+				<items>
+					<SegmentedButtonItem text="${2:}" key="${3:}" />
+				</items>
+			</SegmentedButton>
+			"""
+	"xml.m.SegmentedButtonItem":
+		"prefix": "SegmentedButtonItem"
+		"body":
+			"""
+			<SegmentedButtonItem text="${1:}" key="${2:}" />
+			"""
+	"xml.m.Select":
+		"prefix": "Select"
+		"body":
+			"""
+			<Select
+				forceSelection="${1:false}"
+				selectedKey="${2:}"
+				items="{
+					path: '${3:}',
+					sorter: { path: '${4:}' }
+				}">
+				<core:Item key="${5:}" text="${6:}" />
+			</Select>
+			"""
+	"xml.m.SelectDialog":
+		"prefix": "SelectDialog"
+		"body":
+			"""
+			<SelectDialog
+				noDataText="${1:}"
+				title="${2:}"
+				search="${3:handleSearch}"
+				confirm="${4:handleClose}"
+				close="${5:handleClose}"
+				items="{
+					path: '${6:}'
+				}" >
+				<StandardListItem
+					title="${7:}"
+					description="${8:}"
+					icon="${9:}"
+					iconDensityAware="${10:false}"
+					iconInset="${11:false}"
+					type="${12:Active}" />
+			</SelectDialog>
+			"""
+	"xml.m.SelectList":
+		"prefix": "SelectList"
+		"body":
+			"""
+			<SelectList
+				items="{
+					path: '${1:}',
+					sorter: { path: '${2:}' }
+				}">
+				<core:Item key="${3:}" text="${4:}" />
+			</SelectList>
+			"""
+	"xml.m.Slider":
+		"prefix": "Slider"
+		"body":
+			"""
+			<Slider value="${1:30}" width="${2:100%}" />
+			"""
+	"xml.m.SlideTile":
+		"prefix": "SlideTile"
+		"body":
+			"""
+			<SlideTile class="sapUiSmallMargin">
+				<tiles>
+					${1:}
+				</tiles>
+			</SlideTile>
+			"""
+	"xml.m.SplitApp":
+		"prefix": "SplitApp"
+		"body":
+			"""
+			<SplitApp initialDetail="${1:pageId}" initialMaster="${2:pageId}" orientationChange="${3:onOrientationChange}">
+				<detailPages>
+					${4:}
+				</detailPages>
+				<masterPages>
+					${5:}
+				</masterPages>
+			</SplitApp>
+			"""
+	"xml.m.SplitContainer":
+		"prefix": "SplitContainer"
+		"body":
+			"""
+			<SplitContainer initialDetail="${1:pageId}" initialMaster="${2:pageId}">
+				<detailPages>
+					${3:}
+				</detailPages>
+				<masterPages>
+					${4:}
+				</masterPages>
+			</SplitContainer>
+			"""
 	"xml.m.StandardListItem":
 		"prefix": "StandardListItem"
 		"body":
 			"""
 			<StandardListItem
-				title="{${1:titleProperty}}"
-				description="{${2:descriptionProperty}}" />
+				title="${1:titleProperty}"
+				description="${2:descriptionProperty}" />
+			"""
+	"xml.m.StandardTile":
+		"prefix": "StandardTile"
+		"body":
+			"""
+			<StandardTile
+				icon="${1:}"
+				type="${2:}"
+				number="${3:}"
+				numberUnit="${4:}"
+				title="${5:}"
+				info="${6:}"
+				infoState="${7:}" />
+			"""
+	"xml.m.Switch":
+		"prefix": "Switch"
+		"body":
+			"""
+			<Switch state="${1:true}" customTextOn="${2:}" customTextOff="${3:}"/>
+			"""
+# xml.m Alphabetical order, T:
+	"xml.m.TabContainer":
+		"prefix": "TabContainer"
+		"body":
+			"""
+			<TabContainer items="{ path: '${1:}' }"
+				showAddNewButton="${2:true}"
+				addNewButtonPress="${3:addNewButtonPressHandler}" itemClose="${4:itemCloseHandler}">
+				<items>
+					<TabContainerItem name="${5:}" modified="${6:}">
+						<content>
+							${7:}
+						</content>
+					</TabContainerItem>
+				</items>
+			</TabContainer>
+			"""
+	"xml.m.TabContainerItem":
+		"prefix": "TabContainerItem"
+		"body":
+			"""
+			<TabContainerItem name="${1:}" modified="${2:}">
+				<content>
+					${3:}
+				</content>
+			</TabContainerItem>
 			"""
 	"xml.m.Table":
 		"prefix": "Table"
@@ -173,3 +1140,277 @@
 				</items>
 			</Table>
 			"""
+	"xml.m.TableSelectDialog":
+		"prefix": "TableSelectDialog"
+		"body":
+			"""
+			<TableSelectDialog
+				noDataText="${1:}"
+				title="${2:}"
+				search="${3:handleSearch}"
+				confirm="${4:handleClose}"
+				cancel="${5:handleClose}"
+				items="{
+					path : '${6:}',
+					sorter : {
+						path : '${7:}',
+						descending : ${8:false}
+					}
+				}">
+				<ColumnListItem>
+					<cells>
+						${9:}
+					</cells>
+				</ColumnListItem>
+				<columns>
+					${10:}
+				</columns>
+			</TableSelectDialog>
+			"""
+	"xml.m.Text":
+		"prefix": "Text"
+		"body":
+			"""
+			<Text text="${1:}" />
+			"""
+	"xml.m.TextArea":
+		"prefix": "TextArea"
+		"body":
+			"""
+			<TextArea value="${1:}" rows="${2:6}" />
+			"""
+	"xml.m.TileContainer":
+		"prefix": "TileContainer"
+		"body":
+			"""
+			<TileContainer
+			tileDelete="${1:handleTileDelete}"
+			tiles="${2:}">
+				${3:}
+			</TileContainer>
+			"""
+	"xml.m.TimePicker":
+		"prefix": "TimePicker"
+		"body":
+			"""
+			<TimePicker
+				valueFormat="${1:hh:mm:ss a}"
+				displayFormat="${2:hh:mm:ss a}"
+				change="${3:handleChange}"
+				placeholder="${4:}"/>
+			"""
+	"xml.m.Title":
+		"prefix": "Title"
+		"body":
+			"""
+			<Title text="${1:}" level="${2:}"/>
+			"""
+	"xml.m.ToggleButton":
+		"prefix": "ToggleButton"
+		"body":
+			"""
+			<ToggleButton text="${1:}" pressed="${2:true}" press="${3:onPress}" />
+			"""
+	"xml.m.Token":
+		"prefix": "Token"
+		"body":
+			"""
+			<Token text="${1:}" key="${2:}"/>
+			"""
+	"xml.m.Tokenizer":
+		"prefix": "Tokenizer"
+		"body":
+			"""
+			<Tokenizer
+				tokens="{path: '${1:}',
+		                sorter: { path: '${2:}' }
+			}">
+				<Token key="${3:}" text="${4:}" />
+			</Tokenizer>
+			"""
+	"xml.m.Toolbar":
+		"prefix": "Toolbar"
+		"body":
+			"""
+			<Toolbar>
+				${1:}
+			</Toolbar>
+			"""
+	"xml.m.ToolbarSeparator":
+		"prefix": "ToolbarSeparator"
+		"body":
+			"""
+			<ToolbarSeparator/>
+			"""
+	"xml.m.ToolbarSpacer":
+		"prefix": "ToolbarSpacer"
+		"body":
+			"""
+			<ToolbarSpacer/>
+			"""
+# xml.m Alphabetical order, U:
+	"xml.m.UploadCollection":
+		"prefix": "UploadCollection"
+		"body":
+			"""
+			<UploadCollection
+				maximumFilenameLength="${1:55}"
+				maximumFileSize="${2:10}"
+				multiple="${3:true}"
+				showSeparators="${4:All}"
+				change="${5:onChange}"
+				fileDeleted="${6:onFileDeleted}"
+				filenameLengthExceed="${7:onFilenameLengthExceed}"
+				fileRenamed="${8:onFileRenamed}"
+				fileSizeExceed="${9:onFileSizeExceed}"
+				selectionChange="${10:onSelectionChange}"
+				typeMissmatch="${11:onTypeMissmatch}"
+				uploadComplete="${12:onUploadComplete}"
+				beforeUploadStarts="${13:onBeforeUploadStarts}"
+				uploadTerminated="${14:onUploadTerminated}"
+				items="{path : '${15:}', templateShareable : '${16:true}'}"
+				numberOfAttachmentsText="${17:}"
+				mode="${18:SingleSelectMaster}">
+				<toolbar>
+					${18:}
+				</toolbar>
+				<items>
+					${19:}
+				</items>
+			</UploadCollection>
+			"""
+	"xml.m.UploadCollectionItem":
+		"prefix": "UploadCollectionItem"
+		"body":
+			"""
+			<UploadCollectionItem
+				documentId="${1:}"
+				fileName="${2:}"
+				mimeType="${3:}"
+				thumbnailUrl="${4:}"
+				url="${5:}"
+				enableEdit="${6:}"
+				enableDelete="${7:}"
+				visibleDelete="${8:}"
+				visibleEdit="${9:}"
+				attributes="{path : '${10:}', templateShareable : '${11:true}'}"
+				statuses="{path : '${12:}', templateShareable : '${13:true}'"
+				selected="${14:}">
+				<attributes>
+					<ObjectAttribute
+						title="${15:}"
+						text="{path : '${16:}', formatter : '${17:.formatAttribute}'}"
+						active="${18:}"
+						textDirection="${19:}"/>
+				</attributes>
+				<statuses>
+					<ObjectStatus
+						title="${20:}"
+						text="${21:}"
+						state="${22:}"
+						icon="${23:}"
+						iconDensityAware="${24:}"
+						textDirection="${25:}"/>
+				</statuses>
+			</UploadCollectionItem>
+			"""
+# xml.m Alphabetical order, V:
+	"xml.m.VBox":
+		"prefix": "VBox"
+		"body":
+			"""
+			<VBox>
+				${1:}
+			</VBox>
+			"""
+	"xml.m.ViewSettingsCustomItem":
+		"prefix": "ViewSettingsCustomItem"
+		"body":
+			"""
+			<ViewSettingsCustomItem
+				text="${1:}"
+				key="${2:}">
+				<customControl>
+					${3:}
+				</customControl>
+			</ViewSettingsCustomItem>
+			"""
+	"xml.m.ViewSettingsCustomTab":
+		"prefix": "ViewSettingsCustomTab"
+		"body":
+			"""
+			<ViewSettingsCustomTab icon="${1:}" title="${2:}" tooltip="${3:}">
+				<content>
+					${4:}
+				</content>
+			</ViewSettingsCustomTab>
+			"""
+	"xml.m.ViewSettingsDialog":
+		"prefix": "ViewSettingsDialog"
+		"body":
+			"""
+			<ViewSettingsDialog
+				confirm="${1:handleConfirm}">
+				<sortItems>
+					<ViewSettingsItem text="${2:}" key="${3:}" selected="${4:true}" />
+				</sortItems>
+				<groupItems>
+					<ViewSettingsItem text="${5:}" key="${6:}" selected="${7:true}" />
+				</groupItems>
+				<filterItems>
+					<ViewSettingsFilterItem text="${8:}" key="${9:}">
+						<items>
+							<ViewSettingsItem text="${10:}" key="${11:}" />
+						</items>
+					</ViewSettingsFilterItem>
+				</filterItems>
+				<customTabs>
+
+				</customTabs>
+			</ViewSettingsDialog>
+			"""
+	"xml.m.ViewSettingsFilterItem":
+		"prefix": "ViewSettingsFilterItem"
+		"body":
+			"""
+			<ViewSettingsFilterItem text="${1:}" key="${2:}">
+				<items>
+					<ViewSettingsItem text="${3:}" key="${4:}" />
+				</items>
+			</ViewSettingsFilterItem>
+			"""
+	"xml.m.ViewSettingsItem":
+		"prefix": "ViewSettingsItem"
+		"body":
+			"""
+			<ViewSettingsItem text="${1:}" key="${2:}" selected="${3:true}" />
+			"""
+# xml.m Alphabetical order, W:
+	"xml.m.Wizard":
+		"prefix": "Wizard"
+		"body":
+			"""
+			<Wizard
+				complete="${1:wizardCompletedHandler}">
+				<WizardStep
+					title="${2:}"
+					validated="${3:true}">
+					${4:}
+				</WizardStep>
+			</Wizard>
+			"""
+	"xml.m.WizardStep":
+		"prefix": "WizardStep"
+		"body":
+			"""
+			<WizardStep
+				title="${1:}"
+				validated="${2:true}">
+				${3:}
+			</WizardStep>
+			"""
+# xml.m Alphabetical order, X:
+
+# xml.m Alphabetical order, Y:
+
+# xml.m Alphabetical order, Z:
