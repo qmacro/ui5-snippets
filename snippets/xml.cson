@@ -903,11 +903,11 @@
 			</QuickViewGroupElement>
 			"""
 # xml.m Alphabetical order, R:
-	"xml.m.RadionButton":
-		"prefix": "RadionButton"
+	"xml.m.RadioButton":
+		"prefix": "RadioButton"
 		"body":
 			"""
-			<RadionButton groupName="${1:}" text="${2:}" selected="${3:false}" />
+			<RadioButton groupName="${1:}" text="${2:}" selected="${3:false}" />
 			"""
 	"xml.m.RadioButtonGroup":
 		"prefix": "RadioButtonGroup"
